@@ -11,6 +11,7 @@ export const MainPage: FC<RouteComponentProps> = ({ history, match }) => {
   return (
     <>
       <div>Main</div>
+
     </>
   );
 };
