@@ -5,6 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import { useStyles } from "../search-bar/style";
+import Tooltip from "@material-ui/core/Tooltip";
 
 export const Searchbar: FC = () => {
   const classes = useStyles();
@@ -18,10 +19,11 @@ export const Searchbar: FC = () => {
           placeholder="Search Merchandise"
           inputProps={{ "aria-label": "Search Merchandise" }}
         />
-
-        <IconButton className={classes.iconButton} aria-label="Search">
-          <SearchIcon />
-        </IconButton>
+        <Tooltip title="Search" aria-label="Search">
+          <IconButton className={classes.iconButton} aria-label="Search">
+            <SearchIcon />
+          </IconButton>
+        </Tooltip>
       </Paper>
       <div />
     </div>

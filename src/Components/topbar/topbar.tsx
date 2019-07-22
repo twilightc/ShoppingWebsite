@@ -9,6 +9,8 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import SendIcon from "@material-ui/icons/Send";
 import { useStyles } from "./style";
+import IconButton from "@material-ui/core/IconButton";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 const StyledMenu = withStyles({
   paper: {
@@ -67,9 +69,11 @@ export const Topbar: FC = () => {
           </Button>
         </div>
         <div className={classes.user}>
-          <Button href="#text-buttons" className={classes.button}>
-            購物車
-          </Button>
+          {/* can add the stylebadge due to the amounts of items in the buggy */}
+          <IconButton aria-label="Cart">
+            <ShoppingCartIcon />
+          </IconButton>
+
           <div className={classes.dropitem}>
             <Button
               aria-controls="customized-menu"

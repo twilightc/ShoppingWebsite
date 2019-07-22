@@ -7,7 +7,7 @@ const images = [
   {
     url: "/static/images/grid-list/breakfast.jpg",
     title: "Breakfast",
-    width: "40%"
+    width: "30%"
   },
   {
     url: "/static/images/grid-list/burgers.jpg",

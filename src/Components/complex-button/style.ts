@@ -5,8 +5,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: "flex",
       flexWrap: "wrap",
-      minWidth: 300,
-      width: "100%"
+      minWidth: 200,
+      width: "80%",
+      justifyContent: "flex-end"
     },
     image: {
       position: "relative",
