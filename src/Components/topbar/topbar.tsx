@@ -56,7 +56,7 @@ export const Topbar: FC = () => {
   return (
     <div className={classes.topbar}>
       <div className={classes.wrap}>
-        <div>
+        <div className={classes.queryinfo}>
           訪客，您好
           <Button href="#text-buttons" className={classes.button}>
             會員登入
@@ -66,11 +66,11 @@ export const Topbar: FC = () => {
             加入會員
           </Button>
         </div>
-        <div>
+        <div className={classes.user}>
           <Button href="#text-buttons" className={classes.button}>
             購物車
           </Button>
-          <div>
+          <div className={classes.dropitem}>
             <Button
               aria-controls="customized-menu"
               aria-haspopup="true"

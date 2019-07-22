@@ -54,17 +54,11 @@ const StyledTab = withStyles((theme: Theme) =>
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      "margin-top": "50px",
       flexGrow: 1
     },
-    typography: {
-      padding: theme.spacing(3)
-    },
-    demo1: {
-      backgroundColor: theme.palette.background.paper
-    },
     demo2: {
-      backgroundColor: "#2e1534"
+      backgroundColor: "hsla(120, 100%, 20%, 0.4)",
+      marginBottom: "15px"
     }
   })
 );
@@ -104,9 +98,8 @@ const CustomizeTab: FC<RouteComponentProps> = ({ history }) => {
         <StyledTabs value={value} onChange={handleChange}>
           <StyledTab label="首頁" />
           <StyledTab label="市集" />
-          <StyledTab label="購物車" />
+          <StyledTab label="下殺特區" />
         </StyledTabs>
-        <Typography className={classes.typography} />
       </div>
     </div>
   );

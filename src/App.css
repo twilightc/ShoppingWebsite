@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.SearchBar {
+  height: 110px;
+}

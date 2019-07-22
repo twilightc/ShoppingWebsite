@@ -5,16 +5,19 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     topbar: {
       borderBottom: "1px solid #dcdcdc",
-      height: "26px",
+      height: "50px",
       width: "100%",
       backgroundColor: "#f3f3f3"
       // backgroundColor: theme.palette.background.paper
     },
+    queryinfo: {
+      paddingLeft: "5px"
+    },
     wrap: {
       display: "flex",
       justifyContent: "space-between",
+      flexDirection: "row",
       flexWrap: "nowrap",
-      lineHeight: "26px",
       margin: "0 auto"
     },
     button: {
@@ -22,6 +25,15 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     input: {
       display: "none"
+    },
+    user: {
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "nowrap"
+    },
+    dropitem: {
+      paddingTop: "5px",
+      paddingRight: "5px"
     }
   })
 );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Paper from "@material-ui/core/Paper";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Typography from "@material-ui/core/Typography";
@@ -6,7 +6,7 @@ import Link from "@material-ui/core/Link";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import { useStyles } from "./style";
 
-export default function CustomSeparator() {
+export const BreadcrumbInfo: FC = () => {
   const classes = useStyles();
 
   const handleClick = (
@@ -38,4 +38,4 @@ export default function CustomSeparator() {
       </Paper>
     </div>
   );
-}
+};
