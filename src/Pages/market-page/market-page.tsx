@@ -7,17 +7,12 @@ export const MarketPage: FC = () => {
       {/* left part*/}
       <div>
         {/* nested list */}
-        <div></div>
+        <div />
 
-        <div></div>
+        <div />
       </div>
       {/* right part*/}
-      <div>
-        {/* almost use list to produce the data list */}
-
-      </div>
+      <div>{/* almost use list to produce the data list */}</div>
     </>
   );
 };
-
-
