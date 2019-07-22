@@ -4,11 +4,13 @@ import { MarketPage } from "./Pages/market-page/market-page";
 import "./App.css";
 import { Navbar } from "./Components/navbar/navbar";
 import { MainPage } from "./Pages/main-page/main-page";
+import { Topbar } from "./Components/topbar/topbar";
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <Topbar />
         <Navbar />
         <Switch>
           <Route path="/" exact component={MainPage} />

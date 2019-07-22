@@ -6,7 +6,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
-import { useStyles } from "../breadcrumbs/breadcrumb";
+import { useStyles } from "../simple-list/style";
 
 function ListItemLink(props: ListItemProps<"a", { button?: true }>) {
   return <ListItem button component="a" {...props} />;
