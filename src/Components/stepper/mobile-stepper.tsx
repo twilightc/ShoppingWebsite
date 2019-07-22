@@ -9,8 +9,6 @@ import SwipeableViews from "react-swipeable-views";
 import { useStyles } from "../stepper/style";
 import { useTheme } from "@material-ui/core/styles";
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
 const tutorialSteps = [
   {
     label: "San Francisco – Oakland Bay Bridge, United States",
