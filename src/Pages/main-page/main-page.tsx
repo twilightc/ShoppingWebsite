@@ -14,6 +14,7 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import StarBorder from "@material-ui/icons/StarBorder";
 import { useStyles } from "./style";
+import { ComplexBtn } from "../../Components/complex-button/complex-button";
 
 export const MainPage: FC<RouteComponentProps> = ({ history, match }) => {
   const classes = useStyles();
@@ -65,6 +66,7 @@ export const MainPage: FC<RouteComponentProps> = ({ history, match }) => {
           </List>
         </Collapse>
       </List>
+      <ComplexBtn />
     </>
   );
 };

@@ -1,11 +1,17 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { width } from "@material-ui/system";
 
 export const useStyles = makeStyles(
   createStyles({
+    searchbar: {
+      display: "flex",
+      width: "80%",
+      justifyContent: "space-evenly",
+      alignItems: "center"
+    },
     root: {
       padding: "2px 4px",
       display: "flex",
-      alignItems: "center",
       width: 400
     },
     input: {

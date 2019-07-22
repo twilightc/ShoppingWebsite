@@ -20,7 +20,7 @@ const App: React.FC = () => {
             width="100%"
             display="flex"
             flexDirection="row"
-            justifyContent="space-evenly"
+            // justifyContent="Center"
             alignItems="Center"
           >
             <Searchbar />

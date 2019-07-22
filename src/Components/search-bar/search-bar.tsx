@@ -10,20 +10,20 @@ export const Searchbar: FC = () => {
   const classes = useStyles();
 
   return (
-    <>
-      <IconButton className={classes.iconButton} aria-label="Menu">
-        <MenuIcon />
-      </IconButton>
+    <div className={classes.searchbar}>
+      <img src="https://placem.at/things?w=300&h=110&random=hello" />
       <Paper className={classes.root}>
         <InputBase
           className={classes.input}
-          placeholder="Search Google Maps"
-          inputProps={{ "aria-label": "Search Google Maps" }}
+          placeholder="Search Merchandise"
+          inputProps={{ "aria-label": "Search Merchandise" }}
         />
+
         <IconButton className={classes.iconButton} aria-label="Search">
           <SearchIcon />
         </IconButton>
       </Paper>
-    </>
+      <div />
+    </div>
   );
 };
