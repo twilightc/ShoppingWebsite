@@ -11,6 +11,7 @@ import SendIcon from "@material-ui/icons/Send";
 import { useStyles } from "./style";
 import IconButton from "@material-ui/core/IconButton";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { LoginForm } from "../login-form/login-form";
 
 const StyledMenu = withStyles({
   paper: {
@@ -60,10 +61,7 @@ export const Topbar: FC = () => {
       <div className={classes.wrap}>
         <div className={classes.queryinfo}>
           訪客，您好
-          <Button href="#text-buttons" className={classes.button}>
-            會員登入
-          </Button>
-          或
+          <LoginForm /> 或
           <Button href="#text-buttons" className={classes.button}>
             加入會員
           </Button>

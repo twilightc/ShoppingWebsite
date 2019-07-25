@@ -11,7 +11,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       // backgroundColor: theme.palette.background.paper
     },
     queryinfo: {
-      paddingLeft: "5px"
+      display: "flex",
+      paddingLeft: "5px",
+      justifyContent: "center",
+      alignItems: "center"
     },
     wrap: {
       display: "flex",
