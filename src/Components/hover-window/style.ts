@@ -28,7 +28,7 @@ export const useStyles = makeStyles(
         display: "flex",
         padding: "0 20px",
         textDecoration: "none",
-        lineHeight: "60px"
+        lineHeight: "50px"
       },
       "& div:hover": {
         backgroundColor: "#ef5c28",
@@ -49,6 +49,7 @@ export const useStyles = makeStyles(
         top: 0,
         minWidth: "191px"
       },
+
       "& li:hover>ul": {
         display: "flex",
         flexDirection: "column",
@@ -60,6 +61,9 @@ export const useStyles = makeStyles(
         backgroundColor: "#ef5c28"
       },
       "& ul li": {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         minHeight: "60px",
         borderBottom: "#ccc 1px solid"
       },

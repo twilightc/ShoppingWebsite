@@ -1,5 +1,5 @@
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
-import { height } from "@material-ui/system";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -7,7 +7,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderBottom: "1px solid #dcdcdc",
       height: "50px",
       width: "100%",
-      backgroundColor: "#f3f3f3"
+      backgroundColor: "#f3f3f3",
+      opacity: 0.5
       // backgroundColor: theme.palette.background.paper
     },
     queryinfo: {
@@ -37,6 +38,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     dropitem: {
       paddingTop: "5px",
       paddingRight: "5px"
-    }
+    },
+    topbarbtn: {}
   })
 );

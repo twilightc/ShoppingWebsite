@@ -79,6 +79,7 @@ export const Topbar: FC = () => {
               variant="contained"
               color="primary"
               onClick={handleClick}
+              className={classes.topbarbtn}
             >
               Open Menu
             </Button>

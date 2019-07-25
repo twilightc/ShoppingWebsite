@@ -36,6 +36,7 @@ export const BreadcrumbInfo: FC = () => {
           <Typography color="textPrimary">Breadcrumb</Typography>
         </Breadcrumbs>
       </Paper>
+      <div>market</div>
     </div>
   );
 };
