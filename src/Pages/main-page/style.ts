@@ -9,6 +9,19 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     nested: {
       paddingLeft: theme.spacing(4)
+    },
+    button: {
+      right: "40px",
+      position: "fixed",
+      bottom: 0
+    },
+    buttonMobile: {
+      right: 0,
+      position: "fixed",
+      bottom: 0
+    },
+    input: {
+      display: "none"
     }
   })
 );

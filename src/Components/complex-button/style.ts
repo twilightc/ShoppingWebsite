@@ -6,14 +6,14 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       flexWrap: "wrap",
       minWidth: 200,
-      width: "80%",
+      width: "78%",
       justifyContent: "flex-end"
     },
     image: {
       position: "relative",
       height: 200,
       [theme.breakpoints.down("xs")]: {
-        width: "100% !important", // Overrides inline-style
+        width: "80% !important", // Overrides inline-style
         height: 100
       },
       "&:hover, &$focusVisible": {

@@ -7,17 +7,17 @@ const images = [
   {
     url: "/static/images/grid-list/breakfast.jpg",
     title: "Breakfast",
-    width: "30%"
+    width: "20%"
   },
   {
     url: "/static/images/grid-list/burgers.jpg",
     title: "Burgers",
-    width: "30%"
+    width: "20%"
   },
   {
     url: "/static/images/grid-list/camera.jpg",
     title: "Camera",
-    width: "30%"
+    width: "20%"
   }
 ];
 

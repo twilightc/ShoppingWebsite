@@ -1,13 +1,16 @@
 import React, { FC } from "react";
+import {
+  makeStyles,
+  Theme,
+  useTheme,
+  createStyles
+} from "@material-ui/core/styles";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
-import SwipeableViews from "react-swipeable-views";
-import { useStyles } from "../stepper/style";
-import { useTheme } from "@material-ui/core/styles";
 
 const tutorialSteps = [
   {
@@ -37,7 +40,30 @@ const tutorialSteps = [
   }
 ];
 
-function SwipeableTextMobileStepper() {
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      maxWidth: 600,
+      flexGrow: 1
+    },
+    header: {
+      display: "flex",
+      alignItems: "center",
+      height: 50,
+      paddingLeft: theme.spacing(4),
+      backgroundColor: theme.palette.background.default
+    },
+    img: {
+      height: 400,
+      maxWidth: 600,
+      overflow: "hidden",
+      display: "block",
+      width: "100%"
+    }
+  })
+);
+
+export const PictureSwipeable: FC = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -51,16 +77,16 @@ function SwipeableTextMobileStepper() {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   }
 
-  function handleStepChange(step: any) {
-    setActiveStep(step);
-  }
-
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      {/* maybe consider autoplayswipeableviews  here*/}
+      <img
+        className={classes.img}
+        src={tutorialSteps[activeStep].imgPath}
+        alt={tutorialSteps[activeStep].label}
+      />
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -93,4 +119,4 @@ function SwipeableTextMobileStepper() {
       />
     </div>
   );
-}
+};
