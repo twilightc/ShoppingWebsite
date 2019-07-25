@@ -4,11 +4,11 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: "flex",
-      justifyContent: "flex-start",
-      flexWrap: "wrap",
-      opacity: 0.75
+      opacity: 0.75,
+      paddingLeft: "15px"
     },
     paper: {
+      display: "flex",
       padding: theme.spacing(1, 2)
     }
   })
