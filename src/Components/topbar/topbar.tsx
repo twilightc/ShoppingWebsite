@@ -12,6 +12,8 @@ import { useStyles } from "./style";
 import IconButton from "@material-ui/core/IconButton";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { LoginForm } from "../login-form/login-form";
+import { RouteComponentProps } from "react-router";
+import { withRouter } from "react-router-dom";
 
 const StyledMenu = withStyles({
   paper: {
@@ -44,7 +46,7 @@ const StyledMenuItem = withStyles(theme => ({
   }
 }))(MenuItem);
 
-export const Topbar: FC = () => {
+const CustomizeTopbar: FC<RouteComponentProps> = ({ history }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
@@ -55,6 +57,10 @@ export const Topbar: FC = () => {
   function handleClose() {
     setAnchorEl(null);
   }
+
+  const toLogin = () => {
+    history.push("/login");
+  };
 
   return (
     <div className={classes.topbar}>
@@ -90,11 +96,11 @@ export const Topbar: FC = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <StyledMenuItem>
+              <StyledMenuItem onClick={toLogin}>
                 <ListItemIcon>
                   <SendIcon />
                 </ListItemIcon>
-                <ListItemText primary="Sent mail" />
+                <ListItemText primary="登入會員" />
               </StyledMenuItem>
               <StyledMenuItem>
                 <ListItemIcon>
@@ -115,3 +121,5 @@ export const Topbar: FC = () => {
     </div>
   );
 };
+
+export const Topbar = withRouter(CustomizeTopbar);
