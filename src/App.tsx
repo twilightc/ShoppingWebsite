@@ -8,6 +8,7 @@ import { Topbar } from "./Components/topbar/topbar";
 import { Searchbar } from "./Components/search-bar/search-bar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Box } from "@material-ui/core";
+import { LoginPage } from "./Pages/login-page/login-page";
 
 const App: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/" exact component={MainPage} />
           <Route path="/market" component={MarketPage} />
+          <Route path="/login" component={LoginPage} />
           <Route
             path="/:id"
             render={props => <div>{props.match.params.id}</div>}
