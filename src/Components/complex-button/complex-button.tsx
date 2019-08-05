@@ -6,17 +6,17 @@ import { useStyles } from "./style";
 const images = [
   {
     url: "/static/images/grid-list/breakfast.jpg",
-    title: "Breakfast",
+    title: "ASUS",
     width: "20%"
   },
   {
     url: "/static/images/grid-list/burgers.jpg",
-    title: "Burgers",
+    title: "DELL",
     width: "20%"
   },
   {
     url: "/static/images/grid-list/camera.jpg",
-    title: "Camera",
+    title: "MAC",
     width: "20%"
   }
 ];

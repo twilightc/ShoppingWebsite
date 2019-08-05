@@ -1,16 +1,12 @@
-import React, { FC } from "react";
-import {
-  makeStyles,
-  Theme,
-  useTheme,
-  createStyles
-} from "@material-ui/core/styles";
+import React, { FC, useEffect } from "react";
+import { useTheme } from "@material-ui/core/styles";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+import { useStyles } from "./style";
 
 const tutorialSteps = [
   {
@@ -40,34 +36,26 @@ const tutorialSteps = [
   }
 ];
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      maxWidth: 600,
-      flexGrow: 1
-    },
-    header: {
-      display: "flex",
-      alignItems: "center",
-      height: 50,
-      paddingLeft: theme.spacing(4),
-      backgroundColor: theme.palette.background.default
-    },
-    img: {
-      height: 400,
-      maxWidth: 600,
-      overflow: "hidden",
-      display: "block",
-      width: "100%"
-    }
-  })
-);
-
 export const PictureSwipeable: FC = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = tutorialSteps.length;
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (activeStep !== maxSteps - 1) {
+      timer = setTimeout(() => {
+        handleNext();
+      }, 3000);
+    } else {
+      setActiveStep(0);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [activeStep]);
 
   function handleNext() {
     setActiveStep(prevActiveStep => prevActiveStep + 1);
