@@ -2,8 +2,9 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    maxWidth: 400,
-    flexGrow: 1
+    flexGrow: 1,
+    display: "flex",
+    justifyContent: "center"
   },
   header: {
     display: "flex",
@@ -13,9 +14,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.palette.background.default
   },
   img: {
-    height: 255,
-    display: "block",
-    maxWidth: 400,
+    height: "100%",
+
+    maxWidth: 600,
     overflow: "hidden",
     width: "100%"
   }

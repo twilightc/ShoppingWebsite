@@ -3,11 +3,12 @@ import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      marginTop: "20px",
       display: "flex",
       flexWrap: "wrap",
       minWidth: 200,
-      width: "78%",
-      justifyContent: "flex-end"
+      width: "100%",
+      justifyContent: "center"
     },
     image: {
       position: "relative",

@@ -4,6 +4,13 @@ import { NONAME } from "dns";
 
 export const useStyles = makeStyles(
   createStyles({
+    palm: {
+      width: "250px",
+      // flexGrow: 0.4,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    },
     root: {
       margin: 0,
       padding: 0,

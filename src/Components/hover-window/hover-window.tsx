@@ -13,10 +13,10 @@ export const HoverWindow: FC = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <div className={classes.palm}>
       <ul className={classes.root}>
         {dummylist1.map(list1 => (
-          <li key={list1.number}>
+          <li key={list1.name}>
             <div>{list1.name}</div>
             <ul>
               <li>tes1</li>
@@ -26,6 +26,6 @@ export const HoverWindow: FC = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };

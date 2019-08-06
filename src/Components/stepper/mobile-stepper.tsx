@@ -33,6 +33,10 @@ const tutorialSteps = [
     label: "Goč, Serbia",
     imgPath:
       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60"
+  },
+  {
+    label: "",
+    imgpath: ""
   }
 ];
 
@@ -66,16 +70,25 @@ export const PictureSwipeable: FC = () => {
   }
 
   return (
-    <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
+    <>
+      <div className={classes.root}>
+        <img
+          className={classes.img}
+          src={tutorialSteps[activeStep].imgPath}
+          alt={tutorialSteps[activeStep].label}
+        />
+      </div>
+    </>
+  );
+};
+
+{
+  /* <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
-      </Paper>
-      <img
-        className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-      />
-      <MobileStepper
+      </Paper> */
+}
+{
+  /* <MobileStepper
         steps={maxSteps}
         position="static"
         variant="text"
@@ -104,7 +117,5 @@ export const PictureSwipeable: FC = () => {
             Back
           </Button>
         }
-      />
-    </div>
-  );
-};
+      /> */
+}

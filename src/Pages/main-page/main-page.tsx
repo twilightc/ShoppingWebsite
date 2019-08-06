@@ -22,14 +22,16 @@ export const MainPage: FC<RouteComponentProps> = ({ history, match }) => {
   return (
     <>
       <Box
-        width="80%"
         display="flex"
         flexDirection="row"
         flexWrap="nowrap"
-        justifyContent="space-evenly"
+        // width="65%"
+        // marginBottom="20px"
+        // justifyContent="center"
       >
         <HoverWindow />
         <PictureSwipeable />
+        <Box width="250px" />
       </Box>
       <Button
         variant="outlined"
@@ -39,6 +41,7 @@ export const MainPage: FC<RouteComponentProps> = ({ history, match }) => {
         Secondary
       </Button>
       <ComplexBtn />
+      <Box display="flex" flexGrow="1" />
     </>
   );
 };

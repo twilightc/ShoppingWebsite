@@ -5,17 +5,17 @@ import { useStyles } from "./style";
 
 const images = [
   {
-    url: "/static/images/grid-list/breakfast.jpg",
+    url: "https://i.imgur.com/Id8tvDL.jpg",
     title: "ASUS",
     width: "20%"
   },
   {
-    url: "/static/images/grid-list/burgers.jpg",
+    url: "https://i.imgur.com/8DQAsmf.jpg",
     title: "DELL",
     width: "20%"
   },
   {
-    url: "/static/images/grid-list/camera.jpg",
+    url: "https://i.imgur.com/FREYuHR.jpg",
     title: "MAC",
     width: "20%"
   }
