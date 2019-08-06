@@ -4,7 +4,7 @@ import Box from "@material-ui/core/Box";
 import { ImgContainer } from "../../Components/imgcontainer/imgcontainer";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Paper from "@material-ui/core/Paper";
@@ -111,7 +111,7 @@ export const ItemPage: FC = () => {
               color="default"
               className={classes.button}
             >
-              <ShoppingCartIcon />
+              <AddShoppingCartIcon />
               放入購物車
             </Button>
             <Button

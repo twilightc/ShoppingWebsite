@@ -58,6 +58,10 @@ const CustomizeTopbar: FC<RouteComponentProps> = ({ history }) => {
     setAnchorEl(null);
   }
 
+  const toBuggyPage = () => {
+    history.push("/buggypage");
+  };
+
   const toLogin = () => {
     history.push("/login");
   };
@@ -74,7 +78,7 @@ const CustomizeTopbar: FC<RouteComponentProps> = ({ history }) => {
         </div>
         <div className={classes.user}>
           {/* can add the stylebadge due to the amounts of items in the buggy */}
-          <IconButton aria-label="Cart">
+          <IconButton aria-label="Cart" onClick={toBuggyPage}>
             <ShoppingCartIcon />
           </IconButton>
 
@@ -97,22 +101,11 @@ const CustomizeTopbar: FC<RouteComponentProps> = ({ history }) => {
               onClose={handleClose}
             >
               <StyledMenuItem onClick={toLogin}>
-                <ListItemIcon>
-                  <SendIcon />
-                </ListItemIcon>
                 <ListItemText primary="登入會員" />
               </StyledMenuItem>
+
               <StyledMenuItem>
-                <ListItemIcon>
-                  <DraftsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Drafts" />
-              </StyledMenuItem>
-              <StyledMenuItem>
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Inbox" />
+                <ListItemText primary="登出" />
               </StyledMenuItem>
             </StyledMenu>
           </div>

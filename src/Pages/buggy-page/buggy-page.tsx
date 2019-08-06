@@ -35,6 +35,7 @@ export const BuggyPage: FC = () => {
           alignItems="center"
           fontSize="18px"
           height="75px"
+          paddingLeft="20px"
         >
           向賣家(seller 1)購買以下商品:
         </Box>
