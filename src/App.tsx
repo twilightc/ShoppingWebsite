@@ -10,6 +10,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Box } from "@material-ui/core";
 import { LoginPage } from "./Pages/login-page/login-page";
 import { ItemPage } from "./Pages/item-page/item-page";
+import { BuggyPage } from "./Pages/buggy-page/buggy-page";
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           <Route path="/market" component={MarketPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/itempage" component={ItemPage} />
+          <Route path="/buggypage" component={BuggyPage} />
           <Route
             path="/:id"
             render={props => <div>{props.match.params.id}</div>}

@@ -39,6 +39,7 @@ export const MarketPage: FC = () => {
               </ListItem>
             </List>
           </div>
+          {/* Maybe can use Grid List */}
           <div>
             <ItemDetail />
             <ItemDetail />
